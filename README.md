@@ -24,16 +24,16 @@ Java JDK
 Example input and output are visible with intputInt.bin and outputInt.bin.
 The integers in inputInt.bin are converted to 32-bit binary, hexadecimal, 6-bit interger and 16-bit integer
 
-### Instructions
-----
 Interpreter reads a set of machine instructions from a binary file (in big-Endian format).
 The file name is passed as a command-line argument and load those instructions into code memory.
 Then program counter is initialized to 0 and the interpreter runs until a HALT instruction. 
 
 For Java, args[0] = “myprog.bin”, so the command line is:
-
 `> java Vm myprog.bin`
 
+### Instructions
+----
+```
 opcode | instruction | description
   0         HALT	 	  -- stop execution
   1         PUSH v    -- push v (an integer constant) on the stack
@@ -71,7 +71,7 @@ opcode | instruction | description
   33        SHL		    -- pop the top value off the stack, logical shift the bits left by 1 bit, and push the result
   34        SHR		    -- pop the top value off the stack, logical shift the bits right by 1 bit, and push the result
   35        SAR		    -- pop the top value off the stack, arithmetic shift the bits right by 1 bit, and push the result
-
+```
 For two operand instructions, the second operand is on top of the stack, and the first operand is one below it. 
 All instructions are 32 bits: bits 32-22 are ignored, bits 21-16 hold the opcode, and bits 15-0 hold the operand. 
 If there is no operand, bits 15-0 are filled with zeroes, andt ignored.  
