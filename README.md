@@ -35,16 +35,16 @@ For Java, args[0] = “myprog.bin”, so the command line is:
 ----
 ```
 opcode | instruction | description
-  0         HALT        -- stop execution
-  1         PUSH v        -- push v (an integer constant) on the stack
-  2         RVALUE l        -- push the contents of variable l
-  3         LVALUE l        -- push the address of the variable l
-  4         POP		    -- throw away the top value on the stack
-  5         STO		    -- the rvalue on top of the stack is place in the lvalue below it and both are popped
-  6         COPY        -- push a copy of the top value on the stack
+  0         HALT      -- stop execution
+  1         PUSH v    -- push v (an integer constant) on the stack
+  2         RVALUE l  -- push the contents of variable l
+  3         LVALUE l  -- push the address of the variable l
+  4         POP       -- throw away the top value on the stack
+  5         STO       -- the rvalue on top of the stack is place in the lvalue below it and both are popped
+  6         COPY      -- push a copy of the top value on the stack
   7         ADD       -- pop the top two values off the stack, add them, and push the result
-  8         SUB     	-- pop the top two values off the stack, subtract them, and push the result
-  9         MPY    		-- pop the top two values off the stack, multiply them, and push the result
+  8         SUB       -- pop the top two values off the stack, subtract them, and push the result
+  9         MPY       -- pop the top two values off the stack, multiply them, and push the result
   10        DIV       -- pop the top two values off the stack, divide them, and push the result
   11        MOD     	-- pop the top two values off the stack, compute the modulus, and push the result
   12        NEG		    -- pop the top value off the stack, negate it, and push the result
